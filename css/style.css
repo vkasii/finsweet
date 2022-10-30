@@ -1,7 +1,7 @@
 @import url(reset.css);
 @import url(fonts.css);
 
-.wrapper {
+.container {
    min-height: 100%;
    display: flex;
    flex-direction: column;
@@ -10,13 +10,14 @@
 html,
 body{
    height: 100%;
-   font-family: 'Roboto';
+   font-family: 'Roboto-Regular' ;
+   color: #525560;
 }
 
-.container {
-   max-width: 1300px;
+.wrapper {
+   max-width: 1320px;
    margin: 0 auto;
-   padding: 0 10px;
+   padding: 0 20px;
 }
 
 .header {
@@ -26,6 +27,7 @@ body{
    left: 0;
    right: 0;
    box-shadow: 0px -30px 58px #0B0706;
+   z-index: 1;
 }
 
 .header__body {
@@ -57,8 +59,8 @@ body{
 .header__menu-item {
    font-size: 16px;
    font-weight: 500;
-   margin: 0 40px 0 0;
    color: #525560;
+   margin: 0 40px 0 0;
    position: relative;
    transition: all .5s;
 }
@@ -109,36 +111,345 @@ body{
 
 
 .main {
-   padding: 90px 0 0 0;
+   padding: 67px 0 0 0;
    flex: 1 1 auto;
    background-color: #ffffff;
 }
+
+.main.hide {
+   position: relative;
+   z-index: -3;  
+}
+
+.banner {
+   background: url('../img/background.png') 0 0/cover no-repeat;
+}
+
+.banner__content-wrapper {
+   max-width: 640px;
+   text-align: left;
+   padding: 130px 0 190px 0;
+   transition: all 0.5s;
+}
+
+.banner__title {
+   font-size: 64px;
+   font-weight: 700;
+   padding: 0 0 67px 0;
+   color: #ffffff;
+}
+
+.white-button,
+.green-button {
+   font-size: 16px;
+   font-weight: 600;
+   padding: 16px 32px;
+   color: #1D2130;
+   background: #ffffff;
+   border-radius: 4px;
+   position: relative;
+}
+
+.white-button:hover {
+   background: #cecdcd;
+}
+
+.white-button:active {
+   top: 0.6px;
+   left: 0.6px;
+}
+
+.banner__play-button {
+   color: #ffffff;
+   margin: 0 0 0 40px;
+   padding: 0 0 0 35px;
+   position: relative;
+}
+
+.banner__play-button:hover {
+   color: #cecdcd;
+}
+
+.banner__play-button:active {
+   top: 1px;
+   left: 1px;
+
+}
+
+.banner__play-button::before {
+   content: "";
+   background: url('../img/Play icon.svg') 0 0/contain no-repeat;
+   width: 24px;
+   height: 24px;
+   position: absolute;
+   left: 0;
+   top: 0;
+   bottom: 0;
+   margin: auto;
+}
+
+.banner__statistics {
+   display: flex;
+   padding: 0 0 65px 0;
+   color: #ffffff;
+   transition: all 0.5s;
+
+}
+
+.banner__statistics_trees,
+.banner__statistics_donations {
+   font-size: 18px;
+}
+
+.banner__statistics_line {
+   flex: 1 1 auto;
+   background: #ffffff;
+   height: 1px;
+   align-self: center;
+   margin: 0px 25px;
+}
+
+.about-us {
+   padding: 95px 0 0 0;
+}
+
+.row {
+   display: flex;
+   justify-content: space-between;
+}
+.content {
+   padding: 0 0 0 110px;
+   align-self: center;
+}
+
+.title {
+   font-size: 16px;
+   font-weight: 700;
+   letter-spacing: 2px;
+   text-transform: uppercase;
+   position: relative;
+}
+
+.title::before {
+   content: '';
+   width: 70px;
+   height: 2px;
+   background: #1D2130;
+   position: absolute;
+   top: 0;
+   left: -100px;
+   bottom: 0;
+   margin: auto;
+}
+
+.subtitle {
+   font-size: 48px;
+   font-weight: 700;
+   max-width: 608px;
+   color: #1D2130;
+   padding: 35px 0 ;
+}
+
+
+.content__text {
+   max-width: 608px;
+   font-size: 16px;
+   line-height: 26px;
+}
+
+.content__text {
+   padding: 0 0 35px 0;
+   color: #525560;
+}
+
+.green-button {
+   display: inline-block;
+   color: #ffffff;
+   background: #70C174;
+   margin: 15px 0 0 0;
+}
+
+.about-us__image {
+   max-width: 480px;
+   border-radius: 12px;
+   position: relative;
+}
+
+.about-us__image::before {
+   content: "";
+   background: url('../img/Play icon.svg') 0 0/contain no-repeat;
+   width: 64px;
+   height: 64px;
+   position: absolute;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   margin: auto;
+}
+
+.about-us__supporters{
+   padding: 65px 0;
+}
+
+.about-us__supporters_title {
+   font-size: 16px;
+   font-weight: 600;
+   letter-spacing: 2px;
+   color: #1D2130;
+   padding: 0 0 35px 0;
+   text-transform: uppercase;
+   position: relative;
+}
+
+.about-us__supporters_title::after {
+   content: "";
+   height: 1px;
+   max-width: 1100px;
+   width: 100%;
+   background: #e5e5e5;
+   position: absolute;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   margin: auto;
+}
+
+.care {
+   background: #EFF7F2;
+}
+
+
+
 
 footer {
    background-color: burlywood;
    height: 80px;
 }
 
-@media (max-width: 992px) {
+
+
+@media (max-width: 1280px) {
+   .content {
+      padding: 0 10px 0 10px;
+   }
+   .title {
+      border-bottom: 2px solid #1D2130;
+      display: inline;
+   }
+   .title::before {
+      display: none;
+   }
+   
+   .content__text {
+      max-width: 560px;
+   }
+}
+
+
+@media (max-width: 1024px) {
+
    .header__menu-item {
-      margin: 0 30px 0 0;
+      margin: 0 25px 0 0;
 
    }
+
+   .banner__content-wrapper {
+      max-width: 100%;
+      text-align: center;
+      margin: auto;
+   }
+   .banner__title {
+      margin: auto;
+      max-width: 640px;
+   }
+
+   .about-us {
+      padding: 65px 0 0 0;
+   }
+
+   .subtitle {
+      font-size: 40px;
+      padding: 20px 0;
+      max-width: 435px;
+   }
+
+   .content__text {
+      max-width: 435px;
+      padding: 0 0 20px 0;
+
+   }
+
+   .about-us__image {
+      max-width: 400px;
+   }
+}
+
+@media (max-width: 891px) {
+   
+   .title {
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
+      border: none;
+   }
+
+   .subtitle {
+      font-size: 30px;
+      min-width: 310px;
+      padding: 50px 0 20px 0;
+
+   }
+   
+   .content {
+      text-align: center;
+   }
+
+   .content__text {
+      width: 300px;
+      margin: auto;
+   }
+
+   .about-us .green-button {
+      padding: 16px 40px;
+    
+   }
+   
+   .about-us__image {
+      align-self: flex-end;
+      max-width: 350px;
+   }
+
+   .about-us__supporters {
+      padding: 50px 0 30px;
+   }
+   
+   .about-us__supporters .row{
+      flex-wrap: wrap;
+      column-gap: 120px;
+   }
+   
+   .about-us__supporters_title {
+      text-align: center;
+   }
+
 }
 
 @media (max-width: 768px) {
 
-   .container {
+   body.lock {
+      overflow: hidden;
+   }
+
+   .wrapper {
       max-width: 768px;
-      margin: 0 auto;
-      padding: 0 10px;
    }
 
    .header__body {
       height: 50px;
    }
    .header__logo {
-      position: relative;
       z-index: 2;
    }
 
@@ -209,7 +520,7 @@ footer {
    .header__navigation.active {
       top: 0;
    }
-
+   
    .header__menu{
       padding: 60px 0 0 0;
       align-items: center;
@@ -217,14 +528,15 @@ footer {
       display: block;
       text-align: center;     
       overflow: auto;
+      position: relative;
+      z-index: 5;
    }
-
+   
   .header__menu-item {
      display: block;
      font-size: 24px;
      margin: 0 0 20px 0;
      color: #0B0706;
-
    }
    
    .header__menu-item::after {
@@ -235,5 +547,128 @@ footer {
       text-align: center;
       max-width: 310px;
       width: 100%;
+   }
+
+   .main {
+      padding: 50px 0 0 0;
+   }
+
+   .banner__content-wrapper {
+      padding: 100px 0 140px 0;
+   }
+   
+   .banner__title {
+      max-width: 600px;
+      font-size: 50px;
+      font-weight: 700;
+      padding: 0 0 50px 0;
+      color: #ffffff;
+   }
+
+   .banner__statistics_trees,
+   .banner__statistics_donations {
+      font-size: 16px;
+   }
+
+   .about-us {
+      padding: 40px 0 0 0;
+   }
+   
+   .row {
+      column-gap: 66px;
+   }
+   
+   .column {
+      flex-direction: column;
+   }
+
+   .subtitle {
+      max-width: 100%;
+   }
+
+   .content__text {
+      min-width: 100%;
+   }
+
+   .about-us__image {
+      display: none;
+   }
+}
+
+@media (max-width: 655px) {
+
+   .banner__content-wrapper {
+      padding: 70px 0 85px 0;
+  }
+
+  .banner__title {
+   font-size: 37px;
+   max-width: 400px;
+  }
+
+  .white-button {
+   font-size: 16px;
+   padding: 10px 25px;
+  }
+
+  .banner__statistics {
+      padding: 0 0 50px 0;
+      justify-content: space-between;
+   }
+   
+   .banner__statistics_trees,
+   .banner__statistics_donations {
+      font-size: 14px;
+   }
+
+   .banner__statistics_line {
+      display: none;
+   }
+
+   .row {
+      column-gap: 24px;
+   }
+
+   .about-us__supporters_logo {
+      width: 136px;
+      margin: auto;
+   }
+}
+
+@media (max-width: 480px) {
+   .banner__title {
+      font-size: 28px;
+      max-width: 300px;
+   }
+
+   .banner__buttons {
+      display: flex;
+      flex-direction: column;
+      padding: 0 50px;
+   }
+
+   .banner__play-button {
+      margin: 25px 0 0 20px;
+      padding: 10px 0;  
+   }
+
+   .banner__play-button::before {
+      right: 110px;
+   }
+
+   .banner__statistics {
+      display: none;
+   }
+
+   .title {
+      font-size: 14px;
+   }
+
+   .subtitle {
+      font-size: 25px;
+   }
+
+   .content__text {
+      font-size: 14px;
    }
 }
