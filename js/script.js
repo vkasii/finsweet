@@ -38,3 +38,13 @@ toggleMenu.addEventListener('click', function() {
    main.classList.toggle('hide');
    
 })
+
+
+let acordeon = document.querySelectorAll('.footer__nav_title');
+let acordeonBox = document.querySelectorAll('.footer__acordeon');
+acordeon.forEach(function(element, index ) {
+   element.addEventListener('click', function() {
+      element.classList.toggle('active')
+      acordeonBox[index].classList.toggle('show');
+   })
+})
