@@ -1,11 +1,6 @@
 @import url(reset.css);
 @import url(fonts.css);
 
-.container {
-   min-height: 100%;
-   display: flex;
-   flex-direction: column;
-}
 
 html,
 body{
@@ -44,7 +39,6 @@ body{
    justify-self: flex-start;
 }
 
-
 .header__navigation {
    display: flex;
 }
@@ -54,7 +48,6 @@ body{
    align-items: center;
    flex-wrap: wrap;
 }
-
 
 .header__menu-item {
    font-size: 16px;
@@ -99,7 +92,6 @@ body{
    padding: 12px 32px;
    margin: 0;
    transition: all .5s;
-   
 }
 
 .header__button:hover {
@@ -111,7 +103,7 @@ body{
 .main {
    padding: 67px 0 0 0;
    flex: 1 1 auto;
-   background-color: #ffffff;
+   background: #fff;
 }
 
 .main.hide {
@@ -134,7 +126,7 @@ body{
    font-size: 64px;
    font-weight: 700;
    padding: 0 0 67px 0;
-   color: #ffffff;
+   color: #fff;
 }
 
 .white-button,
@@ -143,7 +135,7 @@ body{
    font-weight: 600;
    padding: 16px 32px;
    color: #1D2130;
-   background: #ffffff;
+   background: #fff;
    border-radius: 4px;
    position: relative;
    transition: all .3s;
@@ -160,7 +152,7 @@ body{
 
 .green-button {
    display: inline-block;
-   color: #ffffff;
+   color: #fff;
    background: #70C174;
    margin: 15px 0 0 0;
 }
@@ -170,7 +162,7 @@ body{
 }
 
 .banner__play-button {
-   color: #ffffff;
+   color: #fff;
    margin: 0 0 0 40px;
    padding: 0 0 0 35px;
    position: relative;
@@ -202,9 +194,8 @@ body{
 .banner__statistics {
    display: flex;
    padding: 0 0 65px 0;
-   color: #ffffff;
+   color: #fff;
    transition: all 0.5s;
-
 }
 
 .banner__statistics_trees,
@@ -214,7 +205,7 @@ body{
 
 .banner__statistics_line {
    flex: 1 1 auto;
-   background: #ffffff;
+   background: #fff;
    height: 1px;
    align-self: center;
    margin: 0px 25px;
@@ -261,7 +252,6 @@ body{
    padding: 35px 0 ;
 }
 
-
 .content__text {
    max-width: 608px;
    font-size: 16px;
@@ -272,7 +262,6 @@ body{
    padding: 0 0 35px 0;
    color: #525560;
 }
-
 
 .about-us__image {
    max-width: 480px;
@@ -349,7 +338,6 @@ body{
    border-left: 1px solid #e5e5e5;
    padding: 0 0 0 75px;   
 }
-
 
 .care__we-do_title{
    font-size: 24px;
@@ -450,13 +438,13 @@ body{
    font-size: 28px;
    line-height: 42px;
    font-weight: 700;
-   color: #ffffff;
+   color: #fff;
    position: relative;
    z-index: 1;
 }
 
 .projects .content__text {
-   color: #ffffff;
+   color: #fff;
    padding: 16px 0 64px 0;
    position: relative;
    z-index: 1;
@@ -493,7 +481,7 @@ body{
 .donations .subtitle,
 .donations .content__text,
 .donations__statistic_info{
-   color: #ffffff;
+   color: #fff;
 }
 
 .donations__statistic_info {
@@ -565,7 +553,7 @@ body{
 
 .contribute .subtitle {
    padding: 0 20px 35px 20px;
-   color: #ffffff;
+   color: #fff;
    margin: auto;
 }
 
@@ -731,13 +719,12 @@ body{
 .footer__nav_title {
    font-size: 16px;
    font-weight: 700;
-   color: #ffffff;
+   color: #fff;
 }
 
 .footer__nav_title:hover {
    cursor: pointer;
    color: #dadada;
-
 }
 
 .footer__nav_item {
@@ -745,7 +732,7 @@ body{
    font-weight: 400;
    opacity: 0.78;
    margin: 24px 0 0 0;
-   color: #ffffff;
+   color: #fff;
    display: block;
 }
 
@@ -758,7 +745,7 @@ body{
    font-size: 40px;
    line-height: 56px;
    font-weight: 700;
-   color: #ffffff;
+   color: #fff;
 }
 
 .footer__form form {
@@ -780,8 +767,8 @@ body{
 }
 
 .footer__email:focus{
-   border: 1px solid #ffffff;
-   color: #ffffff;
+   border: 1px solid #fff;
+   color: #fff;
 }
 
 .footer__form .white-button {
@@ -819,7 +806,6 @@ body{
 
    .header__menu-item {
       margin: 0 25px 0 0;
-
    }
 
    .banner__content-wrapper {
@@ -845,7 +831,6 @@ body{
    .content__text {
       max-width: 435px;
       padding: 0 0 20px 0;
-
    }
 
    .about-us__image {
@@ -875,7 +860,6 @@ body{
       right: 0;
       text-align: center;
       max-width: 100%;
-
    }
 
    .care__image {
@@ -887,6 +871,7 @@ body{
       justify-content: space-around;
       row-gap: 23px;
    }
+
    .projects .title {
       display: block;
       text-align: center;
@@ -946,7 +931,6 @@ body{
 
    .about-us .green-button {
       padding: 16px 40px;
-    
    }
    
    .about-us__image {
@@ -1074,6 +1058,7 @@ body{
    .header__body {
       height: 50px;
    }
+
    .header__logo {
       z-index: 2;
    }
@@ -1112,7 +1097,6 @@ body{
       width: 100%;
       background: #0B0706;
       transition: all .3s;
-
    }
 
 
@@ -1137,7 +1121,7 @@ body{
       top: -100%;
       left: 0;
       padding: 0 10px;
-      background: #ffffff;
+      background: #fff;
       flex-direction: column;
       transition: all 0.3s;
    }
@@ -1187,7 +1171,7 @@ body{
       font-size: 50px;
       font-weight: 700;
       padding: 0 0 50px 0;
-      color: #ffffff;
+      color: #fff;
    }
 
    .banner__statistics_trees,
@@ -1302,6 +1286,7 @@ body{
    .news__title {
       text-align: center;
    }
+
    .news__title::after {
       display: none;
    }
@@ -1360,7 +1345,7 @@ body{
       width: 9px;
       position: absolute;
       right: 0;
-      background: #ffffff;
+      background: #fff;
       display: block;
    }
 
@@ -1415,17 +1400,17 @@ body{
       padding: 70px 0 85px 0;
    }
 
-  .banner__title {
+   .banner__title {
       font-size: 37px;
       max-width: 400px;
    }
 
-  .white-button {
+   .white-button {
       font-size: 16px;
       padding: 10px 25px;
    }
 
-  .banner__statistics {
+   .banner__statistics {
       padding: 0 0 50px 0;
       justify-content: space-between;
    }
@@ -1456,6 +1441,7 @@ body{
    .contribute__image-bg {
       margin: 35px 0;
    }
+
    .contribute .white-button,
    .contribute .green-button {
       padding: 12px 24px;
@@ -1665,7 +1651,7 @@ body{
       right: 0;
       bottom: 0;
       margin: auto;
-      background: #ffffff;
+      background: #fff;
       display: block;
    }
 
