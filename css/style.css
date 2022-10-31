@@ -27,7 +27,7 @@ body{
    left: 0;
    right: 0;
    box-shadow: 0px -30px 58px #0B0706;
-   z-index: 1;
+   z-index: 5;
 }
 
 .header__body {
@@ -278,6 +278,12 @@ body{
    max-width: 480px;
    border-radius: 12px;
    position: relative;
+   cursor: pointer;
+   transition: all 0.3s;
+}
+
+.about-us__image:hover {
+   transform: scale(1.05);
 }
 
 .about-us__image::before {
@@ -318,6 +324,15 @@ body{
    right: 0;
    bottom: 0;
    margin: auto;
+}
+
+.about-us__supporters_logo {
+   transition: all 0.3s;
+}
+
+.about-us__supporters_logo:hover {
+   cursor: pointer;
+   transform: scale(1.05);
 }
 
 .care {
@@ -383,6 +398,12 @@ body{
 
 .care__image {
    align-self: end;
+   cursor: pointer;
+   transition: all 0.3s;
+}
+
+.care__image:hover {
+   transform: scale(1.05);
 }
 
 .projects .wrapper {
@@ -558,6 +579,57 @@ body{
    opacity: .3;
 }
 
+.news .row {
+   gap: 24px;
+
+}
+
+.news__title {
+   font-size: 40px;
+   font-weight: 600;
+   color: #1D2130;
+   position: relative;
+   margin: 0 0 50px 0;
+}
+
+.news__title::after {
+   content: '';
+   height: 1px;
+   max-width: 950px;
+   width: 100%;
+   background: #e5e5e5;
+   position: absolute;
+   top: 0;
+   right: 0;   
+   bottom: 0;
+   margin: auto;
+}
+
+.news__post {
+   display: flex;
+   flex-direction: column;
+   cursor: pointer;
+   transition: all 0.3s;
+}
+
+.news__post:hover{
+   transform: scale(1.05);
+}
+
+.news__post_img {
+   border-radius: 8px;
+}
+
+.news__post_title {
+   font-size: 20px;
+   line-height: 30px;
+   font-weight: 600;
+   color: #1C1D28;
+   padding: 16px 0 8px 0;
+   flex: 1 1 auto;
+}
+
+
 .footer {
    background-color: burlywood;
    height: 80px;
@@ -580,6 +652,11 @@ body{
 
    .about-us__supporters_title::after {
       top: unset;
+   }
+
+   .news__title::after {
+      top: unset;
+
    }
 }
 
@@ -796,6 +873,18 @@ body{
    .donations__statistic {
       flex-direction: column;
       gap: 30px;
+   }
+
+   .news .row {
+      flex-wrap: wrap;   
+   }
+
+   .news__post {
+      width: 48%;
+   }
+
+   .news .content__text {
+      width: 100%;
    }
 }
 
@@ -1076,7 +1165,7 @@ body{
       width: 136px;
       margin: auto;
    }
-
+   
    .donations .subtitle {
       padding: 30px 20px 20px 20px;
       text-align: center;
@@ -1087,6 +1176,19 @@ body{
       padding: 12px 24px;
    }
    
+   .news .row {
+      gap: 15px;
+   }
+   
+   .news__post {
+      width: 100%;
+      text-align: center;
+   }
+
+   .news__post_title,
+   .news .content__text {
+      padding: 0 0 0 0;
+   }
 }
 
 @media (max-width: 480px) {
